@@ -21,6 +21,7 @@ export class GeneralError extends Error {
         init(this, code, message, details)
     }
 }
+
 export class AuthError extends Error {
     constructor(message, details) {
         super(message)
@@ -39,6 +40,13 @@ export class DataError extends Error {
     constructor(message) {
         super(message)
         init(this, 'Data', message)
+    }
+}
+
+export class NetError extends Error {
+    constructor(message, details) {
+        super(message)
+        init(this, 'Validation', message, details)
     }
 }
 
