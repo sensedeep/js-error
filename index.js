@@ -15,6 +15,13 @@ function init(self, code, message, details) {
     }
 }
 
+export class AbortError extends Error {
+    constructor(message, details) {
+        super(message)
+        init(this, 'Abort', message, details)
+    }
+}
+
 export class GeneralError extends Error {
     constructor(code, message, details) {
         super(message)
